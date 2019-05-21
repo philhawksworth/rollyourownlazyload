@@ -59,7 +59,7 @@ h1, h2, h3 {
   font-weight: 600;
   padding-top: 2em;
   padding-bottom:0.2em;
-  line-height: 1;
+  line-height: 1.2;
 }
 h1 {
 
@@ -130,7 +130,7 @@ a {
   }
 }
 
-$blurRadius: 10px;
+
 
 .post-teaser {
 
@@ -142,7 +142,7 @@ $blurRadius: 10px;
     overflow:hidden;
     img {
       width: 100%;
-      transition: filter 1s,
+      transition: filter 0.5s,
     }
   }
 

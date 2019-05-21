@@ -5,7 +5,7 @@
 
 
 [dev]
-  command = "yarn run start"
+  command = "yarn run dev"
 
 
 [[redirects]]
