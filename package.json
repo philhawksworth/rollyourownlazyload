@@ -5,6 +5,7 @@
   "author": "Phil Hawksworth",
   "license": "MIT",
   "scripts": {
+    "start": "yarn run dev",
     "dev": "gulp dev & ELEVENTY_ENV=dev eleventy --serve",
     "build": "gulp build & ELEVENTY_ENV=prod eleventy"
   },

@@ -3,6 +3,8 @@ title: Lightweight lazy loading with Netlify Large Media
 layout: default
 ---
 
+Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for more explanation and examples.
+
 {% set somePhotos = [
   {url: "lighthouse-5.jpg", credit: "ezgi yıldırım", creditURL: "https://unsplash.com/photos/Ej1mWW2cd6Q"}
 ] %}
@@ -13,7 +15,6 @@ layout: default
 {%- endfor -%}
 </section >
 
-Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for more explanation and examples.
 
 ## Image transformation
 
