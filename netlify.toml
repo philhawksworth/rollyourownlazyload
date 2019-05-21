@@ -1,0 +1,34 @@
+[build]
+  command = "yarn run build"
+  publish = "dist"
+  NODE_ENV = "10.15.3"
+
+
+[dev]
+  command = "yarn run start"
+
+
+[[redirects]]
+  from = "/images/tiny/*"
+  to = "https://example-nlm-picture.netlify.com/images/:splat/?nf_resize=fit&w=20"
+  status = 200
+
+[[redirects]]
+  from = "/images/small/*"
+  to = "https://example-nlm-picture.netlify.com/images/:splat/?nf_resize=fit&w=500"
+  status = 200
+
+[[redirects]]
+  from = "/images/medium/*"
+  to = "https://example-nlm-picture.netlify.com/images/:splat/?nf_resize=fit&w=600"
+  status = 200
+
+[[redirects]]
+  from = "/images/large/*"
+  to = "https://example-nlm-picture.netlify.com/images/:splat/?nf_resize=fit&w=700"
+  status = 200
+
+[[redirects]]
+  from = "/images/original/*"
+  to = "https://example-nlm-picture.netlify.com/images/:splat/"
+  status = 200
