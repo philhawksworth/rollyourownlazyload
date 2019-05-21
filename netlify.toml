@@ -10,25 +10,25 @@
 
 [[redirects]]
   from = "/images/tiny/*"
-  to = "https://lazy-load-nlm.netlify.com/images/:splat/?nf_resize=fit&w=20"
-  # status = 200
+  to = "https://lazy-load-nlm.netlify.com/images/:splat?nf_resize=fit&w=20"
+  status = 302
 
 [[redirects]]
   from = "/images/small/*"
-  to = "https://lazy-load-nlm.netlify.com/images/:splat/?nf_resize=fit&w=500"
-  # status = 200
+  to = "https://lazy-load-nlm.netlify.com/images/:splat?nf_resize=fit&w=500"
+  status = 302
 
 [[redirects]]
   from = "/images/medium/*"
-  to = "https://lazy-load-nlm.netlify.com/images/:splat/?nf_resize=fit&w=600"
-  # status = 200
+  to = "https://lazy-load-nlm.netlify.com/images/:splat?nf_resize=fit&w=600"
+  status = 302
 
 [[redirects]]
   from = "/images/large/*"
-  to = "https://lazy-load-nlm.netlify.com/images/:splat/?nf_resize=fit&w=700"
-  # status = 200
+  to = "https://lazy-load-nlm.netlify.com/images/:splat?nf_resize=fit&w=700"
+  status = 302
 
 [[redirects]]
   from = "/images/original/*"
-  to = "https://lazy-load-nlm.netlify.com/images/:splat/"
-  # status = 200
+  to = "https://lazy-load-nlm.netlify.com/images/:splat"
+  status = 302
