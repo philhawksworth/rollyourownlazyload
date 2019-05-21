@@ -36,7 +36,7 @@ To clean these URLs up a little, we can use [Netlify's Redirects API](https://ww
 - [/images/small/lighthouse-5.jpg](/images/small/lighthouse-5.jpg) (→ [lighthouse-5.jpg?nf_resize=fit&w=500](/images/lighthouse-5.jpg?nf_resize=fit&w=500) )
 - [/images/original/lighthouse-5.jpg](/images/original/lighthouse-5.jpg) ( → [lighthouse-5.jpg](/images/lighthouse-5.jpg) )
 
-The [redirects config](({{ pkg.repository.url }}/blob/master/netlify.toml)) uses fully qualified URLs here, so that we can see the same transformations while developing locally with [Netlify Dev](https://netlify.com/products/dev)
+The [redirects config]({{ pkg.repository.url }}/blob/master/netlify.toml) uses fully qualified URLs here, so that we can see the same transformations while developing locally with [Netlify Dev](https://netlify.com/products/dev)
 
 ## Using the picture element
 
