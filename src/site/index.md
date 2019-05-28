@@ -26,7 +26,7 @@ For example, the image below can be served in any size:
 
 - [lighthouse-5.jpg?nf_resize=fit&w=20](/images/lighthouse-5.jpg?nf_resize=fit&w=20)
 - [lighthouse-5.jpg?nf_resize=fit&w=500](/images/lighthouse-5.jpg?nf_resize=fit&w=500)
-- [lighthouse-5.jpg?nf_resize=fit&w=600](/images/lighthouse-5.jpg?nf_resize=fit&w=600)
+- [lighthouse-5.jpg?nf_resize=fit&w=700](/images/lighthouse-5.jpg?nf_resize=fit&w=700)
 
 ## Abstract with helper URLs
 
