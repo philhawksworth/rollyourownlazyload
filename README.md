@@ -19,7 +19,7 @@ To build the site you need:
 git clone git@github.com:https://github.com/philhawksworth/lazy-load-with-nlm.git
 
 # go to the working directory
-cd example-netlify-large-media-srcset
+cd lazy-load-with-nlm
 
 # install dependencies
 yarn
