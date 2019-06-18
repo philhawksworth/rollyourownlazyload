@@ -14,16 +14,16 @@ function loadImage(picture) {
   var loadingPath = "images/tiny";
   var sizes = ["large","medium","small"];
 
-  for(var el=0; el<sources.length; el++) {
+  for(var s=0; s<sources.length; s++) {
     // update the src or srcset urls
-    // (knowing the the last chlld will be the src and all others will be srcset)
-    if(el == sources.length-1) {
-      updateAttributeURL(sources[el], "src", loadingPath, "images/"+sizes[el] );
+    if (sources[s].hasAttribute("srcset")) {
+      updateAttributeURL(sources[s], "srcset", loadingPath, "images/"+sizes[s] );
     } else {
-      updateAttributeURL(sources[el], "srcset", loadingPath, "images/"+sizes[el] );
+      updateAttributeURL(sources[s], "src", loadingPath, "images/"+sizes[s] );
     }
-    // remove the lazy-initial class when the fulll image is loaded to unblur
-    sources[el].addEventListener('load', image => {
+
+    // remove the lazy-initial class when the full image is loaded to unblur
+    sources[s].addEventListener('load', image => {
       image.target.closest("picture").classList.remove("lazy-initial")
     }, false);
   }

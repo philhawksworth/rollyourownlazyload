@@ -11,7 +11,7 @@ Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for m
 <section class="post-teaser">
 {%- for photo in somePhotos %}
   <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
-  {% lazypicture photo.url, "Yummy cake" %}
+  {% lazypicture photo.url, "A snazzy lighthouse" %}
 {%- endfor -%}
 </section >
 
@@ -52,7 +52,7 @@ These images have been added to the page in various sizes, using the picture ele
 <section class="post-teaser">
 {%- for photo in somePhotos %}
   <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
-  {% lazypicture photo.url, "Yummy cake" %}
+  {% lazypicture photo.url, "A snazzy lighthouse" %}
 {%- endfor -%}
 </section >
 
@@ -77,7 +77,7 @@ outputs this html:
 <picture class="lazy lazy-initial">
   <source srcset="/images/tiny/lighthouse.jpg" media="(min-width: 1200px)">
   <source srcset="/images/tiny/lighthouse.jpg" media="(min-width: 740px)">
-  <img src="/images/tiny/lighthouse.jpg" alt="Yummy cake" />
+  <img src="/images/tiny/lighthouse.jpg" alt="A snazzy lighthouse" />
 </picture>
 ```
 

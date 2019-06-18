@@ -1,5 +1,5 @@
 {
-  "name": "Netlifu-large-media-picture-exmaple",
+  "name": "Netlify-large-media-lazy-load",
   "version": "1.0.0",
   "description": "An example of using Netlify Large Media to power a lightweight lazy image loading strategy",
   "author": "Phil Hawksworth",
@@ -18,7 +18,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.0.2",
     "gulp-uglify-es": "^1.0.4",
     "html-minifier": "^3.5.21",
     "require-dir": "^1.2.0"

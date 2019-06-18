@@ -140,7 +140,7 @@ a {
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     margin-bottom: 5em;
     display:block;
-    overflow:hidden;
+    overflow: hidden;
     line-height: 0;
     img {
       width: 100%;
@@ -150,7 +150,7 @@ a {
 
   picture.lazy-initial {
     img {
-      width: calc(100% + ($blurRadius *2));
+      width: calc(100% + 2 * #{$blurRadius});
       filter: blur($blurRadius *2 );
       margin: ($blurRadius * -1) ($blurRadius * -2) ($blurRadius * -2)  ($blurRadius * -1);
     }
