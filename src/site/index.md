@@ -67,7 +67,7 @@ This shortcode:
 
 ```html
 {%- raw -%}
-{% lazypicture lighthouse.jpg "A lighthouse" %}
+{% lazypicture lighthouse.jpg "A snazzy lighthouse" %}
 {% endraw %}
 ```
 
