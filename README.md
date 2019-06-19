@@ -1,8 +1,8 @@
-# Example: Lazy loading with Netlify Large Media assets
+# Example: Lazy loading without a heavy framework
 
-This is an example site to demonstrate the use of Netlify Large Media for managing source image assets and serving image transformations on-the-fly to populate different source images in picture elements.
+This is an example site to demonstrate how to create your own lazy loading. It uses Netlify Large Media for managing source image assets and serving image transformations on-the-fly to populate different source images in picture elements.
 
-Copy to clipboard
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9b92cf5e-5161-406d-8785-6eaf5a04a241/deploy-status)](https://app.netlify.com/sites/lazy-load-demo/deploys)
 
 
