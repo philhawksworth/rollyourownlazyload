@@ -1,5 +1,5 @@
 {
-  "name": "Netlify-large-media-lazy-load",
+  "name": "Roll-your-own-lazy-load",
   "version": "1.0.0",
   "description": "An example of using Netlify Large Media to power a lightweight lazy image loading strategy",
   "author": "Phil Hawksworth",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/philhawksworth/lazy-load-with-nlm"
+    "url": "https://github.com/philhawksworth/rollyourownlazyload"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.8.3",

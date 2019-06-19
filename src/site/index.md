@@ -1,5 +1,5 @@
 ---
-title: Lightweight lazy loading with Netlify Large Media
+title: Roll your own lazy loading
 layout: default
 ---
 

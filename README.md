@@ -1,4 +1,4 @@
-# Example: Netlify Large Media and picture
+# Example: Lazy loading with Netlify Large Media assets
 
 This is an example site to demonstrate the use of Netlify Large Media for managing source image assets and serving image transformations on-the-fly to populate different source images in picture elements.
 
@@ -16,10 +16,10 @@ To build the site you need:
 ```bash
 
 # clone this repository
-git clone git@github.com:https://github.com/philhawksworth/lazy-load-with-nlm.git
+git clone git@github.com:philhawksworth/rollyourownlazyload.git
 
 # go to the working directory
-cd lazy-load-with-nlm
+cd rollyourownlazyload
 
 # install dependencies
 yarn
