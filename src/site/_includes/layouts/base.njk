@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>{% include "css/main.css" %}</style>
+    <link rel="stylesheet" href="/main.css">
     <title>{{ title }}</title>
-
+    <script src="/js/lazy.js" async defer></script>
   </head>
   <body class="{{ bodyClass }}" >
     <div class="container">
@@ -18,6 +18,6 @@
       {{ content | safe }}
       {% include "footer.njk" %}
     </div>
-    <script>{% include "js/scripts.js" %}</script>
+    
   </body>
 </html>
