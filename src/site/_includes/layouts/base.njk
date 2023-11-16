@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>{% include "css/main.css" %}</style>
+    <link rel="stylesheet" href="/main.css">
     <title>{{ title }}</title>
-
+    <script src="/js/lazy.js" async defer></script>
   </head>
   <body class="{{ bodyClass }}" >
     <div class="container">
       <header>
         <h1>{{ title }}</h1>
         <p class="subtitle">
-          An example of powering picture elements for responsive images with lazy loading, using <a href="https://www.netlify.com/blog/2019/02/26/manage-your-code-and-assets-together-with-netlify-large-media/" target="_BLANK" rel="noopener">Netlify Large Media</a>.
+          An example of powering picture elements for responsive images with lazy loading, using <a href="https://docs.netlify.com/image-cdn/overview/?utm_source=github&utm_medium=icdn-example-pnh&utm_campaign=devex" target="_BLANK" rel="noopener">Netlify Image CDN</a>.
         </p>
       </header>
       {{ content | safe }}
       {% include "footer.njk" %}
     </div>
-    <script>{% include "js/scripts.js" %}</script>
+    
   </body>
 </html>

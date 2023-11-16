@@ -18,25 +18,25 @@ Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for m
 
 ## Image transformation
 
-By managing our source image asset files with [Netlify Large Media](https://www.netlify.com/features/large-media/?utm_source=github&utm_medium=nlm-example-pnh&utm_campaign=devex), we can take advantage of the ability to perform on-the-fly [image transformations](https://www.netlify.com/docs/image-transformation/?utm_source=github&utm_medium=nlm-example-pnh&utm_campaign=devex) to deliver resized and cropped versions of the images directly from [Netlify's ADN](https://www.netlify.com/features/adn/?utm_source=github&utm_medium=nlm-example-pnh&utm_campaign=devex).
+Thanks to the [Netlify Image CDN](https://docs.netlify.com/image-cdn/overview/?utm_source=github&utm_medium=icdn-example-pnh&utm_campaign=devex), we can take advantage of the ability to perform on-the-fly [image transformations](https://docs.netlify.com/image-cdn/overview/?utm_source=github&utm_medium=icdn-example-pnh&utm_campaign=devex#transform-images) to deliver resized and cropped, versions of the images, in the best format for the user's browser, directly from Netlify's optimised [edge infrastructure](https://www.netlify.com/features/adn/?utm_source=github&utm_medium=icdn-example-pnh&utm_campaign=devex).
 
-Netlify transforms and caches image assets if we add querystring parameters to our image src URLs.
+Netlify Image CDN transforms and caches image assets if you make requests via a special `/.netlify/images/` URL, and add querystring parameters.
 
 For example, the image below can be served in any size:
 
-- [lighthouse-5.jpg?nf_resize=fit&w=20](/images/lighthouse-5.jpg?nf_resize=fit&w=20)
-- [lighthouse-5.jpg?nf_resize=fit&w=500](/images/lighthouse-5.jpg?nf_resize=fit&w=500)
-- [lighthouse-5.jpg?nf_resize=fit&w=700](/images/lighthouse-5.jpg?nf_resize=fit&w=700)
+- [/.netlify/images/?url=/images/lighthouse-5.jpg?&w=20](/.netlify/images/?url=/images/lighthouse-5.jpg&w=20)
+- [/.netlify/images/?url=/images/lighthouse-5.jpg&w=500](/.netlify/images/?url=/images/lighthouse-5.jpg&w=500)
+- [/.netlify/images/?url=/images/lighthouse-5.jpg&w=700](/.netlify/images/?url=/images/lighthouse-5.jpg&w=700)
 
 ## Abstract with helper URLs
 
-To clean these URLs up a little, we can use [Netlify's Redirects API](https://www.netlify.com/docs/redirects/?utm_source=github&utm_medium=nlm-example-pnh&utm_campaign=devex) to create some more friendly and abstracted URLs which [proxy]({{ pkg.repository.url }}/blob/master/netlify.toml) to the querystring decorated URLs:
+To clean these URLs up a little, we can use [Netlify's Redirects API](https://www.netlify.com/docs/redirects/?utm_source=github&utm_medium=icdn-example-pnh&utm_campaign=devex) to create some more friendly and abstracted URLs which [proxy]({{ pkg.repository.url }}/blob/master/netlify.toml) to the querystring decorated URLs:
 
-- [/images/tiny/lighthouse-5.jpg](/images/tiny/lighthouse-5.jpg) ( → [lighthouse-5.jpg?nf_resize=fit&w=20](/images/lighthouse-5.jpg?nf_resize=fit&w=20) )
-- [/images/small/lighthouse-5.jpg](/images/small/lighthouse-5.jpg) (→ [lighthouse-5.jpg?nf_resize=fit&w=500](/images/lighthouse-5.jpg?nf_resize=fit&w=500) )
-- [/images/original/lighthouse-5.jpg](/images/original/lighthouse-5.jpg) ( → [lighthouse-5.jpg](/images/lighthouse-5.jpg) )
+- [/images/tiny/lighthouse-5.jpg](/images/tiny/lighthouse-5.jpg) → [/.netlify/images/?url=/images/lighthouse-5.jpg&w=20](/images/.netlify/images/?url=/images/lighthouse-5.jpg&w=20) 
+- [/images/small/lighthouse-5.jpg](/images/small/lighthouse-5.jpg) → [/.netlify/images/?url=/images/lighthouse-5.jpg&w=500](/images/.netlify/images/?url=/images/lighthouse-5.jpg&w=500) 
+- [/images/original/lighthouse-5.jpg](/images/original/lighthouse-5.jpg) → [/images/lighthouse-5.jpg](/images/lighthouse-5.jpg)
 
-The [redirects config]({{ pkg.repository.url }}/blob/master/netlify.toml) uses fully qualified URLs here, so that we can see the same transformations while developing locally with [Netlify Dev](https://netlify.com/products/dev?utm_source=github&utm_medium=nlm-example-pnh&utm_campaign=devex)
+The [redirects]({{ pkg.repository.url }}/blob/master/netlify.toml) and transformations even work locally to ease your development efforts if you run your local build with [Netlify Dev](https://netlify.com/products/dev?utm_source=github&utm_medium=icdn-example-pnh&utm_campaign=devex)
 
 ## Using the picture element
 
@@ -87,9 +87,8 @@ Then, thanks to the magic of the browser's [Intersection Observer API](https://d
 
 Removing the CSS class which applies the blur once our new image source is loaded completes the effect.
 
-## Get started with Netlify Large Media
+## Get started with Netlify Image CDN
 
 Need some reference code to get you going? You can clone [the code for this site]({{ pkg.repository.url }}) to use as an example.
 
-Once cloned, you can find examples and documentation on how to configure [Netlify Large Media](https://www.netlify.com/features/large-media/?utm_source=github&utm_medium=nlm-example-pnh&utm_campaign=devex), in [the docs](https://www.netlify.com/docs/large-media/?utm_source=github&utm_medium=nlm-example-pnh&utm_campaign=devex).
-
+Once cloned, you can run the build locally or push to Netlify and start getting the benefits of the Netlify Image CDN right away.

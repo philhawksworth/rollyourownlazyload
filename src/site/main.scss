@@ -1,0 +1,174 @@
+@import '_includes/scss/_variables';
+@import '_includes/scss/_mixins';
+@import '_includes/scss/_syntax';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background-color: $accent-color;
+  color: $page-color;
+}
+::selection {
+  background-color: $accent-color;
+  color: $page-color;
+}
+
+html {
+  background-color: $accent-color;
+}
+
+body {
+  text-align: center;
+  background-color: $page-color;
+  border-top: solid 8px $accent-color;
+  border-bottom: solid 8px $accent-color;
+  color: mix($text-color, $page-color, 60%);
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+  @include bp(mid) {
+    font-size: 16px;
+  }
+}
+
+header {
+  display: block;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  text-align: left;
+  @include bp(mid) {
+    width: 600px;
+  }
+  @include bp(wide) {
+    width: 700px;
+  }
+}
+
+h1, h2, h3 {
+  color: $text-color;
+  font-weight: 600;
+  padding-top: 2em;
+  padding-bottom:0.2em;
+  line-height: 1.2;
+}
+h1 {
+
+  @include bp(mid) {
+    font-size: 2.4em;
+  }
+  @include bp(wide) {
+    font-size: 2.8em;
+  }
+}
+
+h2 {
+  padding-top: 3em;
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.credit {
+  font-size: 0.6em;
+  text-align: right;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+ul, ol {
+  padding-left: 1em;
+}
+
+a {
+  color: $text-color;
+  position:relative;
+  text-decoration: none;
+  transition: all 0.2s;
+  border-bottom: solid 1px #eee;
+  white-space: nowrap;
+
+  &::after {
+    background: $accent-color;
+    bottom: -0.1rem;
+    content: '';
+    height: 0.1rem;
+    left: 50%;
+    position: absolute;
+    transform: scaleX(1);
+    transition: all 0.2s;
+    visibility: hidden;
+    width: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-bottom-style: none;
+
+    &::after {
+      visibility: visible;
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+
+
+.post-teaser {
+
+  picture {
+    width: 100%;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    margin-bottom: 5em;
+    display:block;
+    overflow: hidden;
+    line-height: 0;
+    img {
+      width: 100%;
+      transition: filter 0.5s,
+    }
+  }
+
+  picture.lazy-initial {
+    img {
+      width: calc(100% + 2 * #{$blurRadius});
+      filter: blur($blurRadius *2 );
+      margin: ($blurRadius * -1) ($blurRadius * -2) ($blurRadius * -2)  ($blurRadius * -1);
+    }
+  }
+
+}
+
+
+footer {
+  margin-top: 6em;
+  padding-top: 4em;
+  padding-bottom: 6em;
+  border-top: solid 1px mix($text-color, $page-color, 10%);
+  font-size: 0.7em;
+  color: mix($text-color, $page-color, 40%);
+
+  a:link,
+  a:visited {
+    color: mix($text-color, $page-color, 70%);
+  }
+}
