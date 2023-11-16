@@ -1,6 +1,6 @@
-# Example: Lazy loading without a heavy framework
+# Example: Lazy loading without a framework
 
-This is an example site to demonstrate how to create your own lazy loading. It uses [Netlify Large Media](https://www.netlify.com/products/large-media/?utm_source=github&utm_medium=nlm-example-pnh&utm_campaign=devex) for managing source image assets and serving image transformations on-the-fly to populate different source images in picture elements.
+This is an example site to demonstrate how to create your own lazy loading. It uses [Netlify Image CDN](https://docs.netlify.com/image-cdn/overview/?utm_source=github&utm_medium=icdn-example-pnh&utm_campaign=devex) for serving, optimising, and transforming images on-the-fly to populate different source images in picture elements.
 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9b92cf5e-5161-406d-8785-6eaf5a04a241/deploy-status)](https://app.netlify.com/sites/lazy-load-demo/deploys)
@@ -11,7 +11,7 @@ This is an example site to demonstrate how to create your own lazy loading. It u
 To build the site you need:
 
 - [Node](https://nodejs.org) - to run the build
-- [Yarn](https://yarnpkg.com) - to install and manage dependencies
+- [Netlify CLI](https://cli.netlify.com) - to run Netlify tools locally with `netlify dev`
 
 
 ### Getting started
@@ -25,12 +25,8 @@ git clone git@github.com:philhawksworth/rollyourownlazyload.git
 cd rollyourownlazyload
 
 # install dependencies
-yarn
+npm i
 
 # start a local build server with hot reloading and Netlify redirects proxying
 netlify dev
 ```
-
-### Configuring your own Netlify Large Media workflow
-
-After cloning this repo, you can set it up as a site of your own on Netlify, and configure the Netlify Large Media pipeline by following the [guidance in the docs](https://www.netlify.com/docs/large-media/?utm_source=github&utm_medium=nlm-example-pnh&utm_campaign=devex)
