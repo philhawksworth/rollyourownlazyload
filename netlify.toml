@@ -30,5 +30,5 @@
 
 [[redirects]]
   from = "/images/original/*"
-  to = "/images/:splat"
+  to = "/.netlify/images/?url=/images/:splat"
   status = 200
