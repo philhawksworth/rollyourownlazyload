@@ -32,8 +32,8 @@ For example, the image below can be served in any size:
 
 To clean these URLs up a little, we can use [Netlify's Redirects API](https://www.netlify.com/docs/redirects/?utm_source=github&utm_medium=icdn-example-pnh&utm_campaign=devex) to create some more friendly and abstracted URLs which [proxy]({{ pkg.repository.url }}/blob/master/netlify.toml) to the querystring decorated URLs:
 
-- [/images/tiny/lighthouse-5.jpg](/images/tiny/lighthouse-5.jpg) → [/.netlify/images/?url=/images/lighthouse-5.jpg&w=20](/images/.netlify/images/?url=/images/lighthouse-5.jpg&w=20) 
-- [/images/small/lighthouse-5.jpg](/images/small/lighthouse-5.jpg) → [/.netlify/images/?url=/images/lighthouse-5.jpg&w=500](/images/.netlify/images/?url=/images/lighthouse-5.jpg&w=500) 
+- [/images/tiny/lighthouse-5.jpg](/images/tiny/lighthouse-5.jpg) → [/.netlify/images/?url=/images/lighthouse-5.jpg&w=20](/.netlify/images/?url=/images/lighthouse-5.jpg&w=20) 
+- [/images/small/lighthouse-5.jpg](/images/small/lighthouse-5.jpg) → [/.netlify/images/?url=/images/lighthouse-5.jpg&w=500](/.netlify/images/?url=/images/lighthouse-5.jpg&w=500) 
 - [/images/original/lighthouse-5.jpg](/images/original/lighthouse-5.jpg) → [/images/lighthouse-5.jpg](/images/lighthouse-5.jpg)
 
 The [redirects]({{ pkg.repository.url }}/blob/master/netlify.toml) and transformations even work locally to ease your development efforts if you run your local build with [Netlify Dev](https://netlify.com/products/dev?utm_source=github&utm_medium=icdn-example-pnh&utm_campaign=devex)
